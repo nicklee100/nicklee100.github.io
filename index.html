@@ -1,9 +1,21 @@
 ---
 layout: default
-title: First Jekyll post
+title: Home Page 
 ---
 
 <div class="blurb">
-	<h1>heading 1</h1>
-	<p> javascirpt is life.</p> <a href="/about">Read more about my life...</a></p>
+	<ul>
+		{% for post in site.posts %}
+			<div class="posts">
+			    <li>
+			      <a href="{{ post.url }}">{{ post.title }}</a>
+			      <img class="calendar" src="cal.png" alt=""> 
+			      <p class="date"> {{ post.date | date: '%B %d, %Y' }}</p>
+			      <p>     {{ post.excerpt }}</p>
+			 	</li>
+		 	</div>
+	
+		{% endfor %}
+
+	</ul>
 </div><!-- /.blurb -->
