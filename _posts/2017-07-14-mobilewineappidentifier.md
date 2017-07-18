@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Fullstack Hackathon 
-permalink: memsrus
+permalink: mobilewine
 
 excerpt: A mobile wine app identifier with React Native
 ---
